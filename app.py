@@ -50,12 +50,12 @@ model_choice = st.selectbox(
     ]
 )
 
-if not os.path.exists("models"):
+if not os.path.exists("Models"):
     st.error("models folder not found")
     st.stop()
 
 import os
-os.makedirs("models", exist_ok=True)
+os.makedirs("Models", exist_ok=True)
 
 import os
 
@@ -68,11 +68,11 @@ st.write(os.listdir())
 st.write(os.listdir("models"))
 
 paths = {
-    "Logistic": "models/logistic.pkl",
-    "Decision Tree": "models/dt.pkl",
-    "KNN": "models/knn.pkl",
-    "Naive Bayes": "models/nb.pkl",
-    "SVM": "models/svm.pkl"
+    "Logistic": "Models/logistic.pkl",
+    "Decision Tree": "Models/dt.pkl",
+    "KNN": "Models/knn.pkl",
+    "Naive Bayes": "Models/nb.pkl",
+    "SVM": "Models/svm.pkl"
 }
 
 model_path = paths[model_choice]
@@ -83,7 +83,7 @@ import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent
 
-model_path = BASE_DIR / "models" / "logistic.pkl"
+model_path = BASE_DIR / "Models" / "logistic.pkl"
 
 model = joblib.load(model_path)
 
