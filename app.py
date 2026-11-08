@@ -79,3 +79,12 @@ model_path = paths[model_choice]
 
 print(model_path)
 
+import pathlib
+
+BASE_DIR = pathlib.Path(__file__).parent
+
+model_path = BASE_DIR / "models" / "logistic.pkl"
+
+model = joblib.load(model_path)
+
+
