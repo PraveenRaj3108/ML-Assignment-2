@@ -68,11 +68,11 @@ st.write(os.listdir())
 st.write(os.listdir("models"))
 
 paths = {
-    "Logistic": "Models/logistic.pkl",
-    "Decision Tree": "Models/dt.pkl",
-    "KNN": "Models/knn.pkl",
-    "Naive Bayes": "Models/nb.pkl",
-    "SVM": "Models/svm.pkl"
+    "Logistic": "main/logistic.pkl",
+    "Decision Tree": "main/dt.pkl",
+    "KNN": "main/knn.pkl",
+    "Naive Bayes": "main/nb.pkl",
+    "SVM": "main/svm.pkl"
 }
 
 model_path = paths[model_choice]
@@ -83,7 +83,7 @@ import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent
 
-model_path = BASE_DIR / "Models" / "logistic.pkl"
+model_path = BASE_DIR / "main" / "logistic.pkl"
 
 model = joblib.load(model_path)
 
